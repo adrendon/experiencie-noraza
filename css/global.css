@@ -1,0 +1,2573 @@
+
+/* 
+ *
+ *	:: Costa Experience ::
+ *
+ * 	Global Styling
+ *
+ */
+
+
+/* Stg118yling Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Global */
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+body {
+	width: 100%;
+	height:100%;
+    padding: 0;
+    margin: 0 auto;
+	overflow: hidden;
+    position: relative;
+	font-family: 'proxima-nova-n7', 'proxima-nova', sans-serif; 	
+}
+
+p { 
+	margin-bottom: 1em;
+}
+
+#view-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+#loading-screen {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	overflow: hidden;
+	font-size: 120px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 460px;
+}
+#loading-screen {
+	z-index: 2;
+}
+.view {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	font-size: 120px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 460px;
+	float: left;
+}
+
+/* Main UI */
+#main-ui {
+	min-width: 960px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+#main-ui #left-arrow {
+	left: 60px;
+}
+#main-ui #right-arrow {
+	right: 60px;
+}
+#main-ui .arrow {
+    display: none;
+	width: 102px;
+	height: 102px;
+	position: absolute;
+	top: 50%;
+	margin-top: -51px;
+	cursor: pointer;
+	z-index: 102;
+}
+#main-ui .arrow:hover{
+	cursor: pointer;
+}
+#main-ui .arrow.disabled {
+    zoom: 1;
+	/*filter: alpha(opacity=50);
+	opacity: 0.5;*/
+	cursor: default;
+}
+#main-ui .arrow .arrow-shape,
+#main-ui .arrow .arrow-shadow {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+#main-ui .arrow .arrow-shape {
+	z-index: 1;
+}
+#main-ui .arrow .progress {
+	width: 100%;
+	height: 100%;
+    display: none;
+}
+#main-ui .arrow .progress .holder1 {
+	clip: rect(0,102px,102px,51px);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#main-ui .arrow .progress .circle1 {
+	transform:rotate(0deg);
+	-ms-transform:rotate(0deg); 
+	-webkit-transform:rotate(0deg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	clip: rect(0,51px,102px,0);
+}
+#main-ui .arrow .progress .holder2 {
+	clip: rect(0,51px,102px,0);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+#main-ui .arrow .progress .circle2 {
+	transform:rotate(-180deg);
+	-ms-transform:rotate(-180deg); 
+	-webkit-transform:rotate(-180deg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	clip: rect(0,51px,102px,0);
+}
+
+#progress-beans li {
+	background: url(https://costa-experience.s3.amazonaws.com/img/UI%20Assets/bean-background.png) center 18px no-repeat;
+}
+#progress-beans li a {
+	color: #797979;
+	text-decoration: none;
+	display: block;
+}
+
+#progress-beans li.red a {
+	color: #91022e;
+}
+
+/* Main UI Costa Logo + Progress Bar */
+
+#main-ui .arrow .icomoon {
+	text-decoration: none;
+	color: #91022e;
+	text-align: center;
+	z-index: 5;
+	font-size: 37px;;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+}
+
+#main-ui .arrow.disabled .icomoon {
+    color: grey;    
+}
+
+#main-ui #left-arrow .icomoon {
+	left: 47%;	
+}
+
+#main-ui #right-arrow .icomoon {
+	left: 53%;	
+}
+
+#main-ui .costa-logo {
+	position: absolute;
+	left: 35px;
+	bottom: 0;
+	text-align: left;
+	line-height: 54px;
+	height: 54px;
+	color: #fff;
+	font-size: 5em;
+	z-index: 105;
+}
+
+#main-ui .icon-costa-logo {
+	display: block;
+	height: 54px;
+	line-height: 54px;
+	color: #fff;
+	text-decoration: none;
+	padding: 0 25px;
+-webkit-transition: opacity 0.15s cubic-bezier(0.390, 0.575, 0.565, 1.000); 
+   -moz-transition: opacity 0.15s cubic-bezier(0.390, 0.575, 0.565, 1.000); 
+    -ms-transition: opacity 0.15s cubic-bezier(0.390, 0.575, 0.565, 1.000); 
+     -o-transition: opacity 0.15s cubic-bezier(0.390, 0.575, 0.565, 1.000); 
+        transition: opacity 0.15s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+	opacity: 1;
+}
+
+#main-ui .icon-costa-logo:hover {
+	cursor: pointer;
+	opacity: 0.3;
+}
+
+#main-ui .fb-like {
+	position: absolute;
+	border: 0;
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	border-top-left-radius: 8px;
+	background-clip: padding-box;
+	height: 49px;
+	bottom: 0;
+	right: 112px;
+	background: #fff;
+	padding: 5px 12px 0;
+	text-align: center;
+	line-height: 54px;
+	z-index: 102;
+}
+
+#main-ui .fb-share-button {
+	position: absolute;
+	border: 0;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	border-top-right-radius: 8px;
+	background-clip: padding-box;
+	height: 49px;
+	width: 60px;
+	bottom: 0;
+	right: 40px;
+	background: #fff;
+	padding: 5px 12px 0;
+	text-align: center;
+	line-height: 54px;
+	z-index: 102;
+}
+
+#main-ui .fb-like, #main-ui .fb-share-button {
+	*display: none !important;	
+}
+
+#main-ui .fb-share-button span {
+	vertical-align: top !important;
+	position: relative;
+	top: 13px;
+}
+
+#main-ui .fb_send_button_form_widget.fb_iframe_widget.fb_hide_iframes {
+	border: 0;
+}
+#main-ui .fb_send_button_form_widget.fb_iframe_widget {
+	left: -245px !important;
+	overflow: hidden !important;
+	top: auto !important;
+	bottom: 39px !important;
+	border-top: 1px solid black;
+}
+#main-ui .fb_send_button_form_widget.fb_iframe_widget > span {
+	top: -8px !important;
+	min-height: 50px !important;
+}
+
+#progress-bar {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 706px;
+	height: 54px;
+	margin: 0 0 0 -353px;
+	padding: 0;
+	background: url(https://costa-experience.s3.amazonaws.com/img/global/progress-bar-background.png) center 12px no-repeat #fff;
+	border: 0;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	text-align: center;
+	/* no spill */
+	background-clip: padding-box;
+	/* Jons blur?? */
+	-webkit-box-shadow: 0px 0px 2px 0px #fff;
+	box-shadow: 0px 0px 2px 0px #fff;
+	z-index: 102;
+}
+
+#progress {
+	position: absolute;
+	top: 26px;
+	left: 25px;
+	background: #91022e;
+	/* Jon's blur?? 
+	-webkit-box-shadow: 0px 0px 2px 0px #91022e;
+	box-shadow: 0px 0px 2px 0px #91022e; */
+	width: 1px;
+	height: 4px;
+	z-index: 3;
+}
+
+#progress-bar ul {
+	text-align: center;
+	width: 680px;
+	height: 54px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#progress-bar li {
+	float: left;
+	display: inline-block;
+	height: 54px;
+	line-height: 57px;
+	position: relative;
+	z-index: 4;
+	width: 40px;
+	margin: 0;
+	padding: 0;
+}
+
+#progress-bar li:last-child {
+	margin-right: 0 !important;
+}
+
+/* container + text holder bizz */
+
+.container {
+	text-align: left;
+	line-height: 1.5em;
+	font-size: 15px;
+}
+.text-holder {
+	position: absolute;
+	z-index: 99;
+	width: 380px;
+	height: auto;
+	top: 28.7037037;
+	left: 33.3333333333%;
+}
+.text-holder h2 {
+	font-size: 24px;
+	line-height: 3em;
+	font-weight: 700;
+	color: #91022e;
+	zoom: 1;
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+.text-holder p {
+	color: #355589;
+	zoom: 1;
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+	
+/* Parallax Layers */
+.scene, .scene li, .container {
+	padding: 0;
+	margin: 0;
+}
+.scene {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index:1;
+}
+.scene li, .container {
+	width: 2100px !important;
+	height: 1080px !important;
+	position: absolute !important;
+	top: 50% !important;
+	left: 50% !important;
+	margin: -540px 0 0 -1050px;
+}
+.container {
+	z-index: 10;	
+}
+.box {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.box1 {
+	z-index: 10;
+}
+.box2 {
+	z-index: 8;
+}
+.box3 {
+	z-index: 6;
+}
+.box4 {
+	z-index: 4;
+}	
+.box5 {
+	z-index: 2;
+}	
+.layer-contents {
+	z-index: inherit;
+	position: relative;
+}
+
+/* Loading */
+#loading-screen {
+    background: #d5b27a;
+}
+
+#loading-screen .container {
+	z-index: 12;
+}
+
+#loading-screen .container #preloader {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 210px;
+    height: 210px;
+    margin-left: -105px;
+    margin-top: -152px;
+    overflow: hidden;
+    z-index: 6;
+}
+#loading-screen .container #preloader-mask {
+    background: url(https://costa-experience.s3.amazonaws.com/img/01%20Loading/cup-mask.png) center no-repeat;
+    height: 210px;
+    width: 210px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+#loading-screen .container #preloader-finish-state {
+    display: none;
+    width: 210px;
+    height: 210px;
+    background: url(https://costa-experience.s3.amazonaws.com/img/01%20Loading/costa-logo-maroon.png) 98px 72px no-repeat;
+    position: relative;
+    z-index: 4;
+}
+#loading-screen .container #preloader-white-water {
+    width: 92px;
+    height: 0px;
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    margin-left: -46px;
+    z-index: 3;
+}
+#loading-screen .container #white-water {
+    background: url(https://costa-experience.s3.amazonaws.com/img/01%20Loading/white-water.png) repeat-x 0 0;
+    width: 100%;
+    height: 100%;
+}
+#loading-screen .container #preloader-background {
+    width: 92px;
+    height: 132px;
+    background: #6b0021;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -45px;
+    margin-top: -64px;
+    z-index: 1;
+    background: url(https://costa-experience.s3.amazonaws.com/img/01%20Loading/costa-logo-white.png) #6b0021 38px 29px no-repeat;
+}
+
+#loading-screen .container h1 {
+	position: absolute;
+	top: 50%;
+	left: auto;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: -240px;
+	color: #91022e;
+	font-size: 2.4em;
+	font-weight: 900;
+}
+
+#loading-screen .container #preloader-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	text-align: center;
+	margin-left: -300px;
+	margin-top: 75px;
+}
+
+#loading-screen .container #preloader-percentage {
+	font-size: 1.6em;
+	color: #91022e;
+	font-weight: 900;
+	margin-bottom: 40px;
+}
+
+#loading-screen .container #preloader-text p {
+	color: #fff;
+	font-family: 'museo-slab-n7', 'museo-slab', sans-serif;
+}
+
+/* 02 Nations Favourite */
+.view-02-Nations-Favourite {
+    background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/a3cfe5.png) #a3cfe5;
+}
+
+.view-02-Nations-Favourite .box4 .level {
+	background: #a3cfe5;
+}
+.view-02-Nations-Favourite .clouds {
+    z-index: 4;
+}
+
+.view-02-Nations-Favourite p {
+	color: #1e5583;
+}
+
+.view-02-Nations-Favourite .text-holder {
+	top: 18.9814814815%;
+	left: 32.380952381%;
+}
+
+.view-02-Nations-Favourite .tree {
+	top: 10.1851851852%;
+	left: 2.38095238095%;
+	z-index: 3;
+}
+
+.view-02-Nations-Favourite .cafe-people-shadows {
+	position: absolute;
+	top: 52.5%;
+	left: 69.4285714286%;
+	z-index: 5;
+	width: 286px;
+	height: 115px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/02%20Nations%20Favourite/window-people-sprite.png) no-repeat left center transparent;
+}
+
+.view-02-Nations-Favourite .man {
+	position: absolute;
+	top: 49.4%;
+	left: 46.5238095238%;
+	z-index: 4;
+}
+
+.view-02-Nations-Favourite .car {
+	position: absolute;
+	top: 67.2%;
+	width: 72px;
+	height: 52px;
+	z-index: 3;
+	background: url(https://costa-experience.s3.amazonaws.com/img/02%20Nations%20Favourite/car.png) no-repeat top left transparent;
+}
+
+.view-02-Nations-Favourite .car-1 {
+	left: 95%;
+}
+.view-02-Nations-Favourite .car-2 {
+	left: 60%;
+}
+.view-02-Nations-Favourite .car-3 {
+	left: 78%;
+}
+
+.view-02-Nations-Favourite .lorry {
+	position: absolute;
+	left: 92.380952381%;
+	top: 65.83%;
+	width: 92px;
+	height: 58px;
+	z-index: 3;
+	background: url(https://costa-experience.s3.amazonaws.com/img/02%20Nations%20Favourite/lorry.png) no-repeat top left transparent;
+}
+
+.view-02-Nations-Favourite .bunting {
+	position: absolute;
+	left: 52.30%;
+	top: 11.24%;
+	width: 1002px;
+	height: 647px;
+	z-index: 60;
+	background: url(https://costa-experience.s3.amazonaws.com/img/02%20Nations%20Favourite/cafe-bunting.png) no-repeat left center transparent;
+}
+
+.view-02-Nations-Favourite .man {
+	width: 134px;
+	height: 230px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/02%20Nations%20Favourite/man.png) no-repeat top left transparent;
+}
+
+.view-02-Nations-Favourite .falling-leaf {
+	color: #6e854b;
+	z-index: 11;
+	font-size: 8px;
+}
+
+.view-02-Nations-Favourite .dinosaur {
+	position: absolute;
+	top: 80%;
+	left: 22%;
+	width: 117px;
+	height: 115px;
+	z-index: 9;
+	background: url(https://costa-experience.s3.amazonaws.com/img/02%20Nations%20Favourite/dinosaur.png) no-repeat left center transparent;
+}
+
+.view-02-Nations-Favourite .pipe {
+	position: absolute;
+	top: 71%;
+	left: 75%;
+	width: 472px;
+	height: 225px;
+	z-index: 9;
+	background-position: center bottom;
+	overflow: hidden;
+	background: url(https://costa-experience.s3.amazonaws.com/img/02%20Nations%20Favourite/pipe.png) no-repeat left center transparent;
+}
+
+.view-02-Nations-Favourite .grass {
+	background: url(https://costa-experience.s3.amazonaws.com/img/02%20Nations%20Favourite/grass.png) repeat-x center center transparent;
+	width: 100%;
+	height: 25px;
+	position: absolute;
+	left: 0;
+	top: 70.6%;
+	z-index: 10;
+}
+
+.view-02-Nations-Favourite .background-colour {
+	background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/a3cfe5.png) repeat center center transparent;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.view-02-Nations-Favourite #light-1-hover {
+	position: absolute;
+	top: 0px;
+	left: 730px;
+	width: 110px;
+	height: 180px;
+}
+
+/* 03%20Coffee%20Origins */
+.view-03-Coffee-Origins {
+    background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/ddcfba.png) #ddcfba;
+}
+
+.view-03-Coffee-Origins p {
+    color: #64452c;
+}
+
+.view-03-Coffee-Origins .text-holder {
+	top: 20.3703703704%;
+	left: 28.0952380952%;
+}
+
+.view-03-Coffee-Origins .man {
+	width: 210px;
+	height: 380px;
+	position: absolute;
+	top: 384px;
+	left: 1200px;
+	z-index: 4;
+	background: url(https://costa-experience.s3.amazonaws.com/img/03%20Coffee%20Origins/CostaPointerMan_210x380.png) no-repeat top left transparent;
+}
+
+.view-03-Coffee-Origins .light {
+	width: 100px;
+	height: 200px;
+	z-index: 4;
+	position: absolute;
+	top: -25px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/03%20Coffee%20Origins/Swinging_light1_100x200.png) no-repeat top left transparent;
+}
+
+.view-03-Coffee-Origins .light-1 {
+	left: 230px;	
+}
+.view-03-Coffee-Origins .light-2 {
+	left: 760px;	
+}
+.view-03-Coffee-Origins .light-3 {
+	left: 1280px;	
+}
+.view-03-Coffee-Origins .light-4 {
+	left: 1830px;	
+}
+
+#modal-controller .view-03-Coffee-Origins-light-hover {
+	width: 100px;
+	height: 200px;
+	z-index: 4;
+	position: absolute;
+	top: -20px;
+}
+
+#light-1.view-03-Coffee-Origins-light-hover {
+	left: 230px;	
+}
+#light-2.view-03-Coffee-Origins-light-hover {
+	left: 760px;	
+}
+#light-3.view-03-Coffee-Origins-light-hover {
+	left: 1280px;	
+}
+#light-4.view-03-Coffee-Origins-light-hover {
+	left: 1830px;	
+}
+
+.view-03-Coffee-Origins .award {
+	width: 82px;
+	height: 94px;
+	z-index: 4;
+	position: absolute;
+	left: 1512px;	
+	top: 253px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/03%20Coffee%20Origins/award.png) no-repeat left center transparent;
+}
+
+.view-03-Coffee-Origins .guy-walking-past-window {
+	position: absolute;
+	width: 270px;
+	height: 160px;
+	top: 340px;
+	left: 242px;
+	z-index: 0;
+	background: url(https://costa-experience.s3.amazonaws.com/img/03%20Coffee%20Origins/GuyWalkingPastWindow_270x160.png) no-repeat top left transparent;
+}
+
+/* 04%20Helping%20Communities%20Grow */
+.view-04-Helping-Communities-Grow {
+    background: url(https://costa-experience.s3.amazonaws.com/img/04%20Helping%20Communities%20Grow/background.png) 0 0 repeat-x #f4ecc6;
+}
+
+.view-04-Helping-Communities-Grow .clouds {
+	z-index: 5;
+}
+
+.view-04-Helping-Communities-Grow .box4 .level {
+    background: url(https://costa-experience.s3.amazonaws.com/img/04%20Helping%20Communities%20Grow/background.png) 0 0 repeat-x #f4ecc6;
+}
+
+.view-04-Helping-Communities-Grow .falling-leaf {
+	color: #6e854b;
+	z-index: 11;
+	font-size: 8px;
+}
+
+.view-04-Helping-Communities-Grow .text-holder {
+	width: 420px;
+	top: 19.2037037037%;
+	left: 32.33%;
+}
+
+.view-04-Helping-Communities-Grow .costa-man {
+	position: absolute;
+	top: 46.2037037037%;
+	left: 32%;
+	z-index: 3;
+	width: 200px;
+	height: 256px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/04%20Helping%20Communities%20Grow/costa-man_200x256.png) no-repeat left center transparent;
+}
+
+.view-04-Helping-Communities-Grow .coffee-farmer {
+	position: absolute;
+	top: 45.8333333333%;
+	left: 41.8571428571%;
+	z-index: 3;
+	width: 200px;
+	height: 270px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/04%20Helping%20Communities%20Grow/coffee-farmer-main_200x270.png) no-repeat left center transparent;
+}
+
+.view-04-Helping-Communities-Grow .football {
+	position: absolute;
+	left: 1506px;
+	top: 672px;
+	width: 504px;
+	height: 96px;
+	z-index:6;
+	background: url(https://costa-experience.s3.amazonaws.com/img/04%20Helping%20Communities%20Grow/football.png) no-repeat left center transparent;
+}
+
+.view-04-Helping-Communities-Grow .coffee-farmer-man {
+	top: 47.7777777778%;
+	left: 21.1904761905%;
+	position: absolute;
+	z-index: 1;
+	width: 110px;
+	height: 200px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/04%20Helping%20Communities%20Grow/coffee-farmer-man_110x200.png) no-repeat left center transparent;
+}
+
+.view-04-Helping-Communities-Grow .coffee-farmer-woman {
+	position: absolute;
+	top: 49.4444444444%;
+	left: 49.0476190476%;
+	z-index: 1;
+	width: 85px;
+	height: 200px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/04%20Helping%20Communities%20Grow/coffee-farmer-woman_85x200.png) no-repeat left center transparent;
+}
+
+.view-04-Helping-Communities-Grow .hedge {
+	position: absolute;
+	top: 58.7962962963%;
+	left: 16.1904761905%;
+	z-index: 10;
+}
+
+/* 05 Protecting The Planet */   
+.view-05-Protecting-the-Planet {
+    background: url(https://costa-experience.s3.amazonaws.com/img/05%20Protecting%20the%20Planet/background.png) 0 0 repeat-x;
+}
+
+.view-05-Protecting-the-Planet .clouds {
+	z-index: 5;
+}
+
+.view-05-Protecting-the-Planet .box4 .level {
+    background: url(https://costa-experience.s3.amazonaws.com/img/05%20Protecting%20the%20Planet/background.png) 0 0 repeat-x;
+}
+
+.view-05-Protecting-the-Planet .text-holder {
+	width: 540px;
+	top: 21.2962962963%;
+	left: 28.6666666667%;
+}
+
+.view-05-Protecting-the-Planet .text-holder a {
+	font-weight: 600;
+	color: #91022e;
+}
+
+.view-05-Protecting-the-Planet .text-holder a:hover,
+.view-05-Protecting-the-Planet .text-holder a:focus {
+	color: #355589;
+	outline: 0;
+	outline: none;
+}
+
+.view-05-Protecting-the-Planet .costa-farmer {
+	position: absolute;
+	top: 46.5740740741%;
+	left: 46.0476190476%;
+	z-index: 4;
+	width: 230px;
+	height: 270px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/05%20Protecting%20the%20Planet/coffee-farmer_230x270.png) no-repeat left center transparent;
+}
+
+.view-05-Protecting-the-Planet .costa-woman {
+	position: absolute;
+	top: 50.1851851852%;
+	left: 39.5238095238%;
+	z-index: 1;
+	width: 85px;
+	height: 200px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/05%20Protecting%20the%20Planet/coffee-farmer-woman_85x200.png) no-repeat left center transparent;
+}
+
+.view-05-Protecting-the-Planet .costa-man {
+	position: absolute;
+	top: 47.518519%;
+	left: 13.333%;
+	z-index: 1;
+	width: 110px;
+	height: 200px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/05%20Protecting%20the%20Planet/coffee-farmer-man_110x200.png) no-repeat left center transparent;
+}
+
+.view-05-Protecting-the-Planet .box3 .level {
+	z-index: 3;
+}
+
+#main-ui #rainforest-link {
+	position: absolute;
+	top: 26.5%;
+	left: 46%;
+	width: 183px;
+	height: 40px;
+	cursor: pointer;
+	z-index: 102;
+}
+
+/* 06%20From%20Crop%20To%20Costa */
+.view-06-From-Crop-to-Costa {
+    background: url(https://costa-experience.s3.amazonaws.com/img/06%20From%20Crop%20to%20Costa/background.png) 0 0 repeat-x;
+}
+
+.view-06-From-Crop-to-Costa .box4 {
+	z-index: 5;	
+}
+
+.view-06-From-Crop-to-Costa .box5 {
+	z-index: 4;	
+}
+
+.view-06-From-Crop-to-Costa .box5 .level {
+	z-index: 5;
+    background: url(https://costa-experience.s3.amazonaws.com/img/06%20From%20Crop%20to%20Costa/background.png) 0 0 repeat-x;
+}
+
+.view-06-From-Crop-to-Costa .clouds {
+	z-index: 5;
+}
+
+.view-06-From-Crop-to-Costa .text-holder {
+	top: 360px;
+	left: 760px;
+}
+
+.view-06-From-Crop-to-Costa .bean-stalk {
+	position: absolute;
+	bottom: 75px;
+	left: 1180px;
+	width: 600px;
+	height: 720px;
+	z-index: 4;
+	background: url(https://costa-experience.s3.amazonaws.com/img/06%20From%20Crop%20to%20Costa/BeanStalk_600x720.png) no-repeat left center transparent;
+}
+
+.view-06-From-Crop-to-Costa .bean-farmer {
+	position: absolute;
+	top: 23.15%;
+	left: 14.76%;
+	width: 500px;
+	height: 650px;
+	z-index: 3;	
+	background: url(https://costa-experience.s3.amazonaws.com/img/06%20From%20Crop%20to%20Costa/BeanFarmer_500x650.png) no-repeat left center transparent;
+}
+
+/* 07 To The Roastery */
+.view-07-The-Roastery {
+    background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/cfba8d.png) #cfba8d;
+}
+
+.view-07-The-Roastery .text-holder {
+	top: 220px;
+}
+
+.view-07-The-Roastery .text-holder p {
+	color: #fff;
+}
+
+.view-07-The-Roastery .box2 .level {
+	z-index: 5;
+}
+
+.view-07-The-Roastery .gennaro {
+	position: absolute;
+	top: 43.2407407407%;
+	left: 42.8571428571%;
+	width: 180px;
+	height: 300px;
+	z-index: 3;
+	background: url(https://costa-experience.s3.amazonaws.com/img/07%20The%20Roastery/gennaro_180x300.png) no-repeat left center transparent;
+}
+
+/*.view-07-The-Roastery .machine-shadow {
+	position: absolute;
+	z-index: 1;
+	top: 40.0925925926%;
+	left: 37.380952381%;
+}*/
+
+.view-07-The-Roastery .machine-details-dial {
+	position: absolute;
+	top: 510px;
+	left: 1325px;
+	width: 50px;
+	height: 50px;
+	z-index: 8;
+	background: url(https://costa-experience.s3.amazonaws.com/img/07%20The%20Roastery/big_machine_dial_small.png);
+}
+
+.view-07-The-Roastery .machine-details-gears {
+	position: absolute;
+	top: 580px;
+	left: 1210px;
+	width: 155px;
+	height: 98px;
+	z-index: 8;
+	background: url(https://costa-experience.s3.amazonaws.com/img/07%20The%20Roastery/big_machine_gears.png);
+}
+
+.view-07-The-Roastery .machine-details-heat-meter {
+	position: absolute;
+	top: 568px;
+	left: 1585px;
+	width: 39px;
+	height: 94px;
+	z-index: 8;
+	background: url(https://costa-experience.s3.amazonaws.com/img/07%20The%20Roastery/big_machine_heat_meter.png);
+}
+
+.view-07-The-Roastery .machine-details-red-tube {
+	position: absolute;
+	top: 480px;
+	left: 1447px;
+	width: 154px;
+	height: 100px;
+	z-index: 1;
+	background: url(https://costa-experience.s3.amazonaws.com/img/07%20The%20Roastery/big_machine_red_tube.png);
+}
+
+.view-07-The-Roastery .machine-details-white-gear {
+	position: absolute;
+	top: 616px;
+	left: 1681px;
+	width: 46px;
+	height: 49px;
+	z-index: 8;
+	background: url(https://costa-experience.s3.amazonaws.com/img/07%20The%20Roastery/big_machine_white_gear.png);
+}
+
+.view-07-The-Roastery .machine-details-buttons {
+	position: absolute;
+	top: 553px;
+	left: 1179px;
+	width: 42px;
+	height: 21px;
+	z-index: 8;
+	background: url(https://costa-experience.s3.amazonaws.com/img/07%20The%20Roastery/big_machine_buttons.png);
+}
+
+/*.view-07-The-Roastery .machine-details-front {
+	position: absolute;
+	top: 488px;
+	left: 1180px;
+	z-index: 7;
+}*/
+
+.view-07-The-Roastery .machine-details-behind {
+	position: absolute;
+	z-index: 1;
+	top: 44.8148148148%;
+	left: 69.0952380952%;
+	background: url(https://costa-experience.s3.amazonaws.com/img/07%20The%20Roastery/machine-details-behind.png);
+}
+
+/* 08%20Roasting%20Process */
+.view-08-Roasting-Process {
+    background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/cfba8d.png) #cfba8d;
+}
+
+.view-08-Roasting-Process .falling-bean {
+	top: 37.037037037%;
+	left: 66.666667%;
+	position: absolute;
+	font-size: 10px;
+	color: #4b2c12;
+	z-index: 1;
+}
+
+.view-08-Roasting-Process .box2 .level {
+	z-index: 5;
+}
+
+/*.view-08-Roasting-Process .machine-details-front {
+	position: absolute;
+	top: 29.3518518519%;
+	left: 50.9047619048%;
+	z-index: 7;
+	background: url(https://costa-experience.s3.amazonaws.com/img/08%20Roasting%20Process/.png);
+}
+*/
+.view-08-Roasting-Process .machine-details-back {   
+	position: absolute;
+	top: 21.4814814815%;
+	left: 52.8095238095%;
+	z-index: 3;
+	background: url(https://costa-experience.s3.amazonaws.com/img/08%20Roasting%20Process/machine-details-back.png);
+}
+
+.view-08-Roasting-Process .machine-details-dial {
+	position: absolute;
+	top: 314px;
+	left: 1092px;
+	width: 76px;
+	height: 79px;
+	z-index: 8;
+	background: url(https://costa-experience.s3.amazonaws.com/img/08%20Roasting%20Process/big_machine_dial.png);
+}
+
+.view-08-Roasting-Process .machine-details-heat-meter {
+	position: absolute;
+	top: 574px;
+	left: 1070px;
+	width: 39px;
+	height: 94px;
+	z-index: 8;
+	background: url(https://costa-experience.s3.amazonaws.com/img/08%20Roasting%20Process/big_machine_heat_meter.png);
+}
+
+.view-08-Roasting-Process .machine-details-white-gear-i {
+	position: absolute;
+	top: 561px;
+	left: 1234px;
+	width: 46px;
+	height: 49px;
+	z-index: 8;
+	background: url(https://costa-experience.s3.amazonaws.com/img/08%20Roasting%20Process/big_machine_white_gear.png);
+}
+
+.view-08-Roasting-Process .machine-details-white-gear-ii {
+	position: absolute;
+	top: 541px;
+	left: 1268px;
+	width: 46px;
+	height: 49px;
+	z-index: 8;
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+	background: url(https://costa-experience.s3.amazonaws.com/img/08%20Roasting%20Process/big_machine_white_gear.png);
+}
+
+.view-08-Roasting-Process .machine-details-buttons {
+	position: absolute;
+	top: 553px;
+	left: 1179px;
+	width: 42px;
+	height: 21px;
+	z-index: 8;
+	background: url(https://costa-experience.s3.amazonaws.com/img/08%20Roasting%20Process/big_machine_buttons.png);
+}
+
+.view-08-Roasting-Process .man {   
+	position: absolute;
+	top: 42.1296296296%;
+	left: 28.0952380952%;
+	width: 230px;
+	height: 312px;
+	z-index: 1;
+	background: url(https://costa-experience.s3.amazonaws.com/img/08%20Roasting%20Process/RoastingMan_230x312.png) no-repeat left center transparent;
+}
+
+.view-08-Roasting-Process .woman {   
+	position: absolute;
+	top: 43.2407407407%;
+	left: 40.4761904762%;
+	width: 164px;
+	height: 300px;
+	z-index: 1;
+	background: url(https://costa-experience.s3.amazonaws.com/img/08%20Roasting%20Process/RoastingWoman_164x300.png) no-repeat left center transparent;
+}
+
+.view-08-Roasting-Process .beans {   
+	position: absolute;
+	top: 57.1296296296%;
+	left: 0%;
+	height: 45px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/08%20Roasting%20Process/beans.png) 0 0 repeat-x;
+	width: 1060px;
+	z-index: 3;
+}
+
+.view-08-Roasting-Process .pipe {
+	position: absolute;
+	top: 71%;
+	left: 75%;
+	width: 472px;
+	height: 225px;
+	z-index: 9;
+	background-position: center bottom;
+	overflow: hidden;
+}
+
+.view-08-Roasting-Process .text-holder {
+	width: 400px;
+	top: 17.5925925926%;
+	left: 24.2857142857%;
+	width: 400px;
+	top: 20.51851852%;
+	left: 28.0952380952%;
+}
+
+.view-08-Roasting-Process p {
+	color: #fff;
+}
+
+/* 09%20Perfect%20Blend */
+.view-09-Perfect-Blend {
+}
+
+.view-09-Perfect-Blend .steam {
+	position: absolute;
+	top: -90px;
+	left: 1050px;
+	width: 350px;
+	height: 400px;
+	z-index: 7;
+	background: url(https://costa-experience.s3.amazonaws.com/img/09%20Perfect%20Blend/Steam_350x400.png) no-repeat top left center transparent;
+}
+
+.view-09-Perfect-Blend .finger-roll-top {
+	position: absolute;
+	top: 442px;
+	left: 997px;
+	width: 180px;
+	height: 200px;
+	z-index: 9;
+	background: url(https://costa-experience.s3.amazonaws.com/img/09%20Perfect%20Blend/FingerRollTop_180x200.png) no-repeat left center transparent;
+}
+
+.view-09-Perfect-Blend .finger-roll-bottom {
+	position: absolute;
+	top: 442px;
+	left: 997px;
+	width: 180px;
+	height: 200px;
+	z-index: 8;
+	background: url(https://costa-experience.s3.amazonaws.com/img/09%20Perfect%20Blend/FingerRollBottom_180x200.png) no-repeat left center transparent;
+}
+
+.view-09-Perfect-Blend .text-holder {
+	top: 19%;
+	left: 27%;
+	width: 430px;
+}
+
+.view-09-Perfect-Blend .text-holder p {
+	color: #fff;
+}
+.view-09-Perfect-Blend .text-holder h2 {
+	color: #fff;
+}
+
+/* 10%20Costa%20t%20Cup */
+.view-10-Costa-to-Cup {
+    background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/a3cfe5.png) #a3cfe5;
+}
+
+.view-10-Costa-to-Cup .box4 {
+    background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/a3cfe5.png) #a3cfe5;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.view-10-Costa-to-Cup .clouds {
+	z-index: 7;	
+}
+
+.view-10-Costa-to-Cup p {
+    color: #1e5583;
+}
+
+.view-10-Costa-to-Cup .text-holder {
+    top: 20%;
+    left: 28%;
+}
+
+.view-10-Costa-to-Cup .box1 {
+	background: url(https://costa-experience.s3.amazonaws.com/img/10%20Costa%20to%20Cup/earth-spots.png) repeat-x;
+}
+
+.view-10-Costa-to-Cup .grass {
+	background: url(https://costa-experience.s3.amazonaws.com/img/10%20Costa%20to%20Cup/grey-grass.png) repeat-x;
+	position: absolute;
+	z-index: 6;
+	top: 69.6296296296%;
+	left: 0%;
+	width: 100%;
+	height: 35px;
+}
+
+.view-10-Costa-to-Cup .box2 {
+	background: url(https://costa-experience.s3.amazonaws.com/img/10%20Costa%20to%20Cup/level-2.png) repeat-x;
+	background-position-y: 195px; 
+}
+
+.view-10-Costa-to-Cup .box3 {
+	background: url(https://costa-experience.s3.amazonaws.com/img/10%20Costa%20to%20Cup/level-3.png) repeat-x;
+}
+
+.view-10-Costa-to-Cup .lorry-big {
+	top: 32.7777777778%;
+	position: absolute;
+	left: 47.619047619%;
+	width: 884px;
+	height: 431px;
+	z-index: 5;
+	background: url(https://costa-experience.s3.amazonaws.com/img/10%20To%20The%20Shops/lorry_big.png) no-repeat left center transparent;
+}
+
+.view-10-Costa-to-Cup .lorry-trailer {
+	top: 32.7777777778%;
+	position: absolute;
+	left: 47.619047619%;
+	width: 884px;
+	height: 431px;
+	z-index: 7;
+	background: url(https://costa-experience.s3.amazonaws.com/img/10%20To%20The%20Shops/lorry_big_trailer.png) no-repeat left center transparent;
+}
+
+.view-10-Costa-to-Cup .lorry-wheel-1 {
+	top: 667px;
+	position: absolute;
+	left: 1087px;
+	width: 120px;
+	height: 120px;
+	z-index: 7;
+	background: url(https://costa-experience.s3.amazonaws.com/img/10%20To%20The%20Shops/lorry_big_wheel.png) no-repeat left center transparent;
+}
+
+.view-10-Costa-to-Cup .lorry-wheel-2 {
+	top: 668px;
+	position: absolute;
+	left: 1596px;
+	width: 120px;
+	height: 120px;
+	z-index: 6;
+	background: url(https://costa-experience.s3.amazonaws.com/img/10%20To%20The%20Shops/lorry_big_wheel.png) no-repeat left center transparent;
+}
+
+.view-10-Costa-to-Cup .lorry-wheel-3 {
+	top: 665px;
+	position: absolute;
+	left: 1727px;
+	width: 120px;
+	height: 120px;
+	z-index: 6;
+	background: url(https://costa-experience.s3.amazonaws.com/img/10%20To%20The%20Shops/lorry_big_wheel.png) no-repeat left center transparent;
+}
+
+/* 11%20Our%20Stores */
+.view-11-Our-Stores {
+    
+}
+
+.view-11-Our-Stores .barrista {
+    position: absolute;
+    top: 41.94444%;
+    left: 48.5714285714%;
+    width: 170px;
+    height: 310px;
+    background: url(https://costa-experience.s3.amazonaws.com/img/11%20Our%20Stores/barrista_170x310.png) no-repeat left center transparent;
+}
+
+.view-11-Our-Stores .guy-walking-past-window {
+    position: absolute;
+    top: 443px;
+    left: 119px;
+    width: 600px;
+    height: 180px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/11%20Our%20Stores/WindowGuy_600x180.png) no-repeat top left transparent;
+}
+
+.view-11-Our-Stores .barrista-shadow {
+    position: absolute;
+    top: 42.5238095238%;
+    /*left: 49.0476190476%;*/
+    left: 48.5714285714%;
+    width: 170px;
+    height: 310px;
+    z-index: 3;
+	background: url(https://costa-experience.s3.amazonaws.com/img/11%20Our%20Stores/barrista-shadow_170x310.png) no-repeat top left transparent;
+}
+
+.view-11-Our-Stores p, .view-11-Our-Stores h2 {
+	color: #fff;
+}
+
+.view-11-Our-Stores .text-holder {
+	width: 330px;
+	top: 22.22222%;
+	left: 34.5238095238%;
+}
+
+.view-11-Our-Stores .crossing-guy {
+	position: absolute;
+	top: 45.8888888889%;
+	left: 20.1428571429%;
+	width: 180px;
+	height: 270px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/11%20Our%20Stores/CrossingGuy_180x270.png) no-repeat left center transparent;
+}
+
+.view-11-Our-Stores .customer {
+	position: absolute;
+	top: 455px;
+	left: 1610px;
+	width: 140px;
+	height: 310px;
+	z-index: 2;
+	background: url(https://costa-experience.s3.amazonaws.com/img/11%20Our%20Stores/CustomerOurStores_140x310.png) no-repeat left center transparent;
+}
+
+.view-11-Our-Stores .light {
+	width: 100px;
+	height: 200px;
+	z-index: 4;
+	position: absolute;
+	top: -25px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/11%20Our%20Stores/Swinging_light2_100x200.png) no-repeat top left transparent;
+}
+
+.view-11-Our-Stores .light-1 {
+	left: 230px;	
+}
+.view-11-Our-Stores .light-2 {
+	left: 760px;	
+}
+.view-11-Our-Stores .light-3 {
+	left: 1280px;	
+}
+.view-11-Our-Stores .light-4 {
+	left: 1830px;	
+}
+
+#modal-controller .view-11-Our-Stores-light-hover {
+	width: 100px;
+	height: 200px;
+	z-index: 4;
+	position: absolute;
+	top: -20px;
+}
+
+#light-1.view-11-Our-Stores-light-hover {
+	left: 230px;	
+}
+#light-2.view-11-Our-Stores-light-hover {
+	left: 760px;	
+}
+#light-3.view-11-Our-Stores-light-hover {
+	left: 1280px;	
+}
+#light-4.view-11-Our-Stores-light-hover {
+	left: 1830px;	
+}
+
+/* 12%20Talented%20Teams */
+.view-12-Talented-Teams .light {
+	width: 100px;
+	height: 200px;
+	z-index: 4;
+	position: absolute;
+	top: -25px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/11%20Our%20Stores/Swinging_light2_100x200.png) no-repeat top left transparent;
+}
+
+.view-12-Talented-Teams .light-1 {
+	left: 230px;	
+}
+.view-12-Talented-Teams .light-2 {
+	left: 760px;	
+}
+.view-12-Talented-Teams .light-3 {
+	left: 1280px;	
+}
+.view-12-Talented-Teams .light-4 {
+	left: 1830px;	
+}
+
+#modal-controller .view-12-Talented-Teams-light-hover {
+	width: 100px;
+	height: 200px;
+	z-index: 4;
+	position: absolute;
+	top: -20px;
+}
+
+#light-1.view-12-Talented-Teams-light-hover {
+	left: 230px;	
+}
+#light-2.view-12-Talented-Teams-light-hover {
+	left: 760px;	
+}
+#light-3.view-12-Talented-Teams-light-hover {
+	left: 1280px;	
+}
+#light-4.view-12-Talented-Teams-light-hover {
+	left: 1830px;	
+}
+.view-12-Talented-Teams {
+    background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/c3a16d.png) #c3a16d;
+}
+
+.view-12-Talented-Teams .text-holder {
+	width: 500px;
+	top: 200px;
+	left: 26.9523809524%;
+}
+
+.view-12-Talented-Teams h2, .view-12-Talented-Teams p {
+    color: #fff;
+}
+
+.view-12-Talented-Teams .jumping-man {
+	position: absolute;
+	left: 1025px;
+	top: 305px;
+	width: 340px;
+	height: 400px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/12%20Talented%20Teams/JumpingGuy_340x400.png) no-repeat left center transparent;
+}
+
+.view-12-Talented-Teams .award {
+	width: 82px;
+	height: 94px;
+	z-index: 4;
+	position: absolute;
+	left: 1818px;	
+	top: 237px;	
+}
+
+.view-12-Talented-Teams .staff-eyes1 {
+	position: absolute;
+	left: 753px;
+	top: 488px;
+	width: 40px;
+	height: 15px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/12%20Talented%20Teams/CostaStaffBlinkingLeft1_40x15.png) no-repeat left center transparent;
+	z-index: 2;
+}
+
+.view-12-Talented-Teams .staff-eyes2 {
+	position: absolute;
+	left: 633px;
+	top: 486px;
+	width: 50px;
+	height: 15px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/12%20Talented%20Teams/CostaStaffBlinkingLeft2_50x15.png) no-repeat left center transparent;
+	z-index: 2;
+}
+
+.view-12-Talented-Teams .staff-eyes3 {
+	position: absolute;
+	left: 405px;
+	top: 487px;
+	width: 60px;
+	height: 15px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/12%20Talented%20Teams/CostaStaffBlinkingLeft3_60x15.png) no-repeat left center transparent;
+	z-index: 2;
+}
+
+.view-12-Talented-Teams .staff-eyes4 {
+	position: absolute;
+	left: 1483px;
+	top: 489px;
+	width: 60px;
+	height: 15px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/12%20Talented%20Teams/CostaStaffBlinkingRight1_60x15.png) no-repeat left center transparent;
+	z-index: 2;
+}
+
+.view-12-Talented-Teams .staff-eyes5 {
+	position: absolute;
+	left: 1834px;
+	top: 470px;
+	width: 50px;
+	height: 15px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/12%20Talented%20Teams/CostaStaffBlinkingRight2_50x15.png) no-repeat left center transparent;
+	z-index: 2;
+}
+
+.view-12-Talented-Teams .staff1 {
+	position: absolute;
+	left: 796px;
+	top: 408px;
+	width: 160px;
+	height: 360px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/12%20Talented%20Teams/SkilledStaffLeft1_160x360.png) no-repeat left center transparent;
+	z-index: 2;
+}
+
+.view-12-Talented-Teams .staff2 {
+	position: absolute;
+	left: 474px;
+	top: 408px;
+	width: 140px;
+	height: 360px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/12%20Talented%20Teams/SkilledStaffLeft2_140x360.png) no-repeat left center transparent;
+	z-index: 2;
+}
+.view-12-Talented-Teams .staff3 {
+	position: absolute;
+	left: 1340px;
+	top: 408px;
+	width: 140px;
+	height: 360px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/12%20Talented%20Teams/SkilledStaffRight1_140x360.png) no-repeat left center transparent;
+	z-index: 2;
+}
+.view-12-Talented-Teams .staff4 {
+	position: absolute;
+	left: 1554px;
+	top: 408px;
+	width: 160px;
+	height: 360px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/12%20Talented%20Teams/SkilledStaffRight2_160x360.png) no-repeat left center transparent;
+	z-index: 2;
+}
+.view-12-Talented-Teams .staff5 {
+	position: absolute;
+	left: 1669px;
+	top: 408px;
+	width: 170px;
+	height: 360px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/12%20Talented%20Teams/SkilledStaffRight3_170x360.png) no-repeat left center transparent;
+	z-index: 2;
+}
+
+.view-12-Talented-Teams .light {
+	width: 100px;
+	height: 200px;
+	z-index: 4;
+	position: absolute;
+	top: -25px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/11%20Our%20Stores/Swinging_light2_100x200.png) no-repeat top left transparent;
+}
+
+.view-12-Talented-Teams .light-1 {
+	left: 230px;	
+}
+.view-12-Talented-Teams .light-2 {
+	left: 760px;	
+}
+.view-12-Talented-Teams .light-3 {
+	left: 1280px;	
+}
+.view-12-Talented-Teams .light-4 {
+	left: 1830px;	
+}
+
+#modal-controller .view-12-Talented-Teams-light-hover {
+	width: 100px;
+	height: 200px;
+	z-index: 4;
+	position: absolute;
+	top: -20px;
+}
+
+#light-1.view-12-Talented-Teams-light-hover {
+	left: 230px;	
+}
+#light-2.view-12-Talented-Teams-light-hover {
+	left: 760px;	
+}
+#light-3.view-12-Talented-Teams-light-hover {
+	left: 1280px;	
+}
+#light-4.view-12-Talented-Teams-light-hover {
+	left: 1830px;	
+}
+
+/* 13%20Community%20Spirit */
+.view-13-Community-Spirit {
+    background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/a3cfe5.png) #a3cfe5;
+}
+
+.view-13-Community-Spirit .clouds {
+    z-index: 1;
+}
+
+.view-13-Community-Spirit .text-holder {
+	width: 352px;
+	height: auto;
+	top: 18.5%;
+	left: 30%;
+}
+
+.view-13-Community-Spirit .painting-guy {
+	position: absolute;
+	left: 53.61904762%;
+	top: 46.2037037%;
+	width: 200px;
+	height: 260px;
+	z-index: 5;
+	background: url(https://costa-experience.s3.amazonaws.com/img/13%20Community%20Spirit/PaintingGuy_200x260.png) no-repeat left center transparent;
+}
+
+.view-13-Community-Spirit .book-club-guy {
+	position: absolute;
+	left: 29.42857143%;
+	top: 47.96296296%;
+	width: 150px;
+	height: 240px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/13%20Community%20Spirit/BookClubGuy_150x240.png) no-repeat left center transparent;
+}
+
+/* 14%20Got%20Milk */
+.view-14-Got-Milk {
+    background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/a3cfe5.png) #a3cfe5;
+}
+.view-14-Got-Milk .text-holder p {
+	color: #1e5583;
+}
+
+.view-14-Got-Milk .text-holder {
+	width: 500px;
+	top: 19.444444%;
+	left: 30.9523809524%;
+}
+
+.view-14-Got-Milk .tree {
+	top: 10.1851851852%;
+	left: 61.4761904762%;
+	z-index: 3;
+}
+
+.view-14-Got-Milk .tree .falling-leaf {
+	color: #2b5020;
+}
+
+.view-14-Got-Milk .box2 .level {
+	z-index: 5;
+}
+
+.view-14-Got-Milk .cow-head {
+	position: absolute;
+	top: 48.611111%;
+	left: 51.5238095238%;
+	width: 130px;
+	height: 120px;
+	z-index: 7;
+	background: url(https://costa-experience.s3.amazonaws.com/img/14%20Got%20Milk/cow-head_130x120.png) no-repeat left center transparent;
+}
+
+.view-14-Got-Milk .farmer {
+	position: absolute;
+	top: 46.7592592593%;
+	left: 57.8571428571%;
+	width: 180px;
+	height: 270px;
+	z-index: 9;
+	background: url(https://costa-experience.s3.amazonaws.com/img/14%20Got%20Milk/farmer_180x270.png) no-repeat left center transparent;
+}
+
+.view-14-Got-Milk .flag {
+	position: absolute;
+	top: 46.2037037037%;
+	left: 35.4761904762%;
+	width: 115px;
+	height: 120px;
+	z-index: 3;
+	background: url(https://costa-experience.s3.amazonaws.com/img/14%20Got%20Milk/flag_115x120.png) no-repeat left center transparent;
+}
+
+.view-14-Got-Milk .box2 .level {
+	z-index: 5;
+}
+
+.view-14-Got-Milk .tractor {
+	position: absolute;
+	top: 89.722222%;
+	left: 64.4285714286%;
+	z-index: 3;
+	width: 65px;
+	height: 59px;
+	-webkit-transform-origin: -500px 10px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/14%20Got%20Milk/tractor.png) no-repeat top left transparent;
+}
+
+/* 15%20Wider%20Menu */
+.view-15-Wider-Menu {
+    background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/a3cfe5.png) #a3cfe5;
+}
+
+.view-15-Wider-Menu .text-holder {
+	top: 23%;
+	left: 34%;
+	width: 544px;
+}
+
+.view-15-Wider-Menu .box-man {
+	position: absolute;
+	top: 41.2037037037%;
+	left: 36.7619047619%;
+	width: 180px;
+	height: 300px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/15%20Wider%20Menu/BoxGuy_180x300.png) no-repeat left center transparent;
+}
+
+.view-15-Wider-Menu .crossing-guy {
+	position: absolute;
+	top: 43.8888888889%;
+	left: 63.1428571429%;
+	width: 180px;
+	height: 270px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/15%20Wider%20Menu/CrossingGuy_180x270.png) no-repeat left center transparent;
+}
+
+.view-15-Wider-Menu .clouds {
+	z-index: 1;
+}
+
+.view-15-Wider-Menu .baker-lady {
+	position: absolute;
+	top: 414px;
+	left: 1108px;
+	width: 200px;
+	height: 330px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/15%20Wider%20Menu/Baker_200x330.png) no-repeat left center transparent;
+	z-index: 100;
+}
+
+/* 16%20Environmental%20Ambitions */
+.view-16-Environmental-Ambitions {
+    background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/a3cfe5.png) #a3cfe5;
+}
+
+.view-16-Environmental-Ambitions .man {
+	position: absolute;
+	top: 494px;
+	left: 1271px;
+	width: 200px;
+	height: 270px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/16%20Environmental%20Ambitions/DrinkingGuy_200x270.png) no-repeat top left transparent;
+}
+
+.view-16-Environmental-Ambitions .woman {
+	position: absolute;
+	top: 485px;
+	left: 945px;
+	width: 180px;
+	height: 280px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/16%20Environmental%20Ambitions/RubishBagLady_180x280.png) no-repeat top left transparent;
+}
+
+.view-16-Environmental-Ambitions .cafe-people-shadows {
+	position: absolute;
+	top: 560px;
+	left: 150px;
+	width: 286px;
+	height: 115px;
+	z-index: 2;
+	background: url(https://costa-experience.s3.amazonaws.com/img/16%20Environmental%20Ambitions/window-people-sprite.png) no-repeat top left transparent;
+}
+
+.view-16-Environmental-Ambitions .text-holder {
+	width: 452px;
+	top: 19.6851851852%;
+	left: 44.6666666667%;
+}
+
+.view-16-Environmental-Ambitions .car {
+	position: absolute;
+	top: 732px;
+	width: 72px;
+	height: 36px;
+	z-index: 3;
+	background: url(https://costa-experience.s3.amazonaws.com/img/16%20Environmental%20Ambitions/car.png) no-repeat top left transparent;
+}
+
+.view-16-Environmental-Ambitions .car-1 {
+	left: 15%;
+}
+.view-16-Environmental-Ambitions .car-2 {
+	left: 30%;
+}
+.view-16-Environmental-Ambitions .car-3 {
+	left: 40%;
+}
+
+.view-16-Environmental-Ambitions .lorry {
+	position: absolute;
+	left: 1%;
+	top: 710px;
+	width: 92px;
+	height: 58px;
+	z-index: 3;
+	background: url(https://costa-experience.s3.amazonaws.com/img/16%20Environmental%20Ambitions/lorry.png) no-repeat top left transparent;
+}
+
+/* 17%20Costa%20Express */
+.view-17-Costa-Express {
+    
+}
+
+.view-17-Costa-Express p {
+	color: #1e5583;
+}
+
+.view-17-Costa-Express .text-holder {
+	top: 14.5%;
+	width: 680px;
+}
+
+.view-17-Costa-Express .shopper {
+	position: absolute;
+	top: 455px;
+	left: 1880px;
+	width: 140px;
+	height: 310px;
+	z-index: 2;
+	background: url(https://costa-experience.s3.amazonaws.com/img/17%20Costa%20Express/CustomerExpress_140x310.png) no-repeat left center transparent;
+}
+
+.view-17-Costa-Express .shopkeeper {
+	position: absolute;
+	top: 414px;
+	left: 1310px;
+	width: 220px;
+	height: 330px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/17%20Costa%20Express/Sunjeet_220x330.png) no-repeat left center transparent;
+}
+
+.view-17-Costa-Express .costa-express-screen {
+	position: absolute;
+	top: 475px;
+	left: 912px;
+	width: 67px;
+	height: 75px;
+	z-index: 10;
+	background: url(https://costa-experience.s3.amazonaws.com/img/17%20Costa%20Express/costa-express-screen.png) no-repeat left center transparent;
+}
+
+.view-17-Costa-Express .man {
+	position: absolute;
+	top: 455px;
+	left: 638px;
+	width: 200px;
+	height: 310px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/17%20Costa%20Express/DrinkingGuy_200x310.png) no-repeat left center transparent;
+}
+
+/* 18 Sign Off */
+.view-18-Sign-Off {
+    
+}
+
+.view-18-Sign-Off h2,
+.view-18-Sign-Off p {
+    color: #fff;
+}
+
+.view-18-Sign-Off .text-holder {
+	width: 400px;
+	left: 35.5%;
+	top: 30%;
+}
+
+.view-18-Sign-Off .box2 .level {
+	z-index: 5;
+}
+
+.view-18-Sign-Off .costa-lady {
+	position: absolute;
+	left: 1257px;
+	top: 456px;
+	width: 130px;
+	height: 310px;
+	z-index: 3;
+	background: url(https://costa-experience.s3.amazonaws.com/img/18%20Sign%20Off/CostaLady_130x310.png) no-repeat left center transparent;
+}
+
+.view-18-Sign-Off .get-in-touch {
+	position: absolute;
+	left: 894px;
+	top: 363px;
+	width: 170px;
+	height: 400px;
+	z-index: 3;
+	background: url(https://costa-experience.s3.amazonaws.com/img/18%20Sign%20Off/GetInTouch_170x400.png) no-repeat left center transparent;
+}
+
+.view-18-Sign-Off .get-in-touch a {
+	display: block;
+	height: 400px;
+	outline: 0;
+	outline: none;
+}
+
+.view-18-Sign-Off .get-in-touch a:focus {
+	outline: 0;
+	outline: none;
+}
+
+.view-18-Sign-Off .box3 .level {
+	z-index: 5;
+}
+
+.view-18-Sign-Off .costa-lady-shadow {
+	position: absolute;
+	left: 1273px;
+	top: 465px;
+	width: 130px;
+	height: 310px;
+	z-index: 7;
+	background: url(https://costa-experience.s3.amazonaws.com/img/18%20Sign%20Off/CostaLady-shadow_130x310.png) no-repeat left center transparent;
+}
+
+.view-18-Sign-Off .light {
+	width: 150px;
+	height: 152px;
+	z-index: 4;
+	position: absolute;
+	top: 0;
+	background: url(https://costa-experience.s3.amazonaws.com/img/03%20Coffee%20Origins/Swinging_light1-frame1.png) no-repeat left center transparent;
+}
+
+.view-18-Sign-Off .crossing-guy {
+	position: absolute;
+	top: 45.8888888889%;
+	left: 20.1428571429%;
+	width: 180px;
+	height: 270px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/15%20Wider%20Menu/CrossingGuy_180x270.png) no-repeat left center transparent;
+}
+
+.view-18-Sign-Off .customer {
+	position: absolute;
+	top: 455px;
+	left: 1680px;
+	width: 140px;
+	height: 31g8690px;
+	z-index: 40;
+	background: url(https://costa-experience.s3.amazonaws.com/img/18%20Sign%20Off/CustomerOurStores_140x310.png) no-repeat left center transparent;
+}
+
+.view-18-Sign-Off .light {
+	width: 100px;
+	height: 200px;
+	z-index: 4;
+	position: absolute;
+	top: -25px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/11%20Our%20Stores/Swinging_light2_100x200.png) no-repeat top left transparent;
+}
+
+.view-18-Sign-Off .light-1 {
+	left: 230px;	
+}
+.view-18-Sign-Off .light-2 {
+	left: 760px;	
+}
+.view-18-Sign-Off .light-3 {
+	left: 1280px;	
+}
+.view-18-Sign-Off .light-4 {
+	left: 1830px;	
+}
+
+#modal-controller .view-18-Sign-Off-light-hover {
+	width: 100px;
+	height: 200px;
+	z-index: 4;
+	position: absolute;
+	top: -20px;
+}
+
+#light-1.view-18-Sign-Off-light-hover {
+	left: 230px;	
+}
+#light-2.view-18-Sign-Off-light-hover {
+	left: 760px;	
+}
+#light-3.view-18-Sign-Off-light-hover {
+	left: 1280px;	
+}
+#light-4.view-18-Sign-Off-light-hover {
+	left: 1830px;	
+}
+
+#main-ui #get-in-touch {
+	position: absolute;
+	left: 50%;
+	margin-left: -162px;
+	top: 50%;
+	margin-top: -160px;
+	width: 180px;
+	height: 400px;
+	z-index: 102;
+	cursor: pointer;
+}
+
+/* Global */
+
+.box img {
+	position: relative;
+	z-index: 1;
+}
+
+.clouds {
+	position: relative;
+	z-index: 1;
+}
+
+.clouds img {
+	position: absolute;
+	z-index: 1;
+}
+
+.cloud-1-85x32 {
+	top: 27.77778%;
+	left: 54.7619047619%;
+}
+
+.cloud-1-164x61 {
+	top: 9.25925925926%;
+	left: 33.333333%;
+}
+
+.cloud-1-320x118 {
+	top: 18.5185185185%;
+	left: 9.52380952381%;
+}
+
+.cloud-2-101x56 {
+	top: 34.2592592593%;
+	left: 42.8571428571%;
+}
+
+.cloud-2-138x77 {
+	top: 13.888889%;
+	left: 71.4285714286%;
+}
+
+.cloud-2-176x98 {
+	top: 27.777778%;
+	left: 85.7142857143%;
+}
+
+.cloud-top { 
+	background: url(https://costa-experience.s3.amazonaws.com/img/global/clouds-top-1.png) 0 -5px repeat-x;
+	height: 14px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	z-index: inherit;
+}
+
+.cloud-middle { 
+	background: url(https://costa-experience.s3.amazonaws.com/img/global/clouds-top-2.png) -2px -9px repeat-x;
+	height: 23px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: inherit;
+}
+
+.cloud-bottom { 
+	background: url(https://costa-experience.s3.amazonaws.com/img/global/clouds-top-2.png) 0 0 repeat-x;
+	height: 32px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: inherit;
+}
+
+.tree {
+	position: absolute;
+	width: 567px;
+	height: 676px;
+}
+
+.tree-bole {
+	width: 190px;
+	height: 257px;
+	position: absolute;
+	top: 61.9822485207%;
+	left: 37.5661375661%;
+	z-index: 1;
+	background: url(https://costa-experience.s3.amazonaws.com/img/14%20Got%20Milk/tree-bole.png) 0 0 no-repeat;
+	height: 257px;
+}
+
+.tree-foilage {
+	width: 567px;
+	height: 453px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	background: url(https://costa-experience.s3.amazonaws.com/img/14%20Got%20Milk/tree-foilage.png) 0 0 no-repeat;
+	background-size: 567px 453px;
+}
+
+.falling-leaf {
+	color: #2b5020;
+	z-index: 3;
+	width: 8px;
+	height: 10px;
+	font-size: 10px;
+}
+
+/*
+ * Modal
+ */
+/* Modal Styling */
+#mask {
+	position:absolute;
+	top: 0;
+	left: 0;
+	z-index: 101;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	display: none;
+}
+
+#modal-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0 0 0 -330px;
+	width: 660px;
+	height: auto;
+	z-index: 1;
+	padding: 30px;
+	background: white;
+	display: none;
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	transform: scale(0.7);
+	background: #e0e0e0;
+	color: #333;
+  -webkit-box-shadow: 0px 0px 0px 12px rgba(0,0,0,0.25);
+          box-shadow: 0px 0px 0px 12px rgba(0,0,0,0.25);
+  -webkit-border-radius: 8px;
+          border-radius: 8px; 
+	background-clip: padding-box;
+}
+
+#modal-container.active {
+	z-index: 103;
+}
+
+#modal-controller {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 2100px;
+	height: 1080px;
+	margin-left: -1050px;
+	margin-top: -540px;
+	z-index: 101;
+}
+
+.modal {
+	background: url(https://costa-experience.s3.amazonaws.com/img/UI%20Assets/modal-background.png) center center no-repeat;
+	width: 63px;
+	height: 63px;
+	background-size: 63px;
+	display: block;
+	position: absolute;
+	z-index: 101;
+	background-size: 100%;
+}
+
+.ie-7 .modal.modal-info {
+	background: url(https://costa-experience.s3.amazonaws.com/img/UI%20Assets/ie-7/info-ie7.png) center center no-repeat;	
+}
+
+.ie-7 .modal.modal-gallery {
+	background: url(https://costa-experience.s3.amazonaws.com/img/UI%20Assets/ie-7/photo-ie7.png) center center no-repeat;	
+}
+
+.ie-7 .modal.modal-photo {
+	background: url(https://costa-experience.s3.amazonaws.com/img/UI%20Assets/ie-7/photo-ie7.png) center center no-repeat;	
+}
+
+.ie-7 .modal.modal-video {
+	background: url(https://costa-experience.s3.amazonaws.com/img/UI%20Assets/ie-7/videos-ie7.png) center center no-repeat;	
+}
+
+.ie-7 .modal div.inner {
+	background: none;	
+}
+
+.modal div.inner {
+	background: url(https://costa-experience.s3.amazonaws.com/img/UI%20Assets/modal-shape.png) center center no-repeat;
+	display: block;
+	background-size: 39px;
+	height: 63px;
+	text-align: center;
+	line-height: 63px;
+	color: #91022e;
+}
+
+.modal:hover {
+	cursor: pointer;
+}
+
+.modal:hover div {
+	color: #7b0227;
+}
+
+.modal-content #slideshow {
+	margin-bottom: 1rem;
+}
+
+.modal-content {
+	font-family: 'museo-slab-n7', 'museo-slab', sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 21px;
+}
+
+.modal-content ul#list li {
+	list-style-type: disc;
+	margin-left: 30px;
+}
+
+.modal-content ul#list {
+	margin-bottom: 1em;
+}
+
+.modal-content h2 {
+	font-weight: 700;
+	margin: 0 0 24px 0 !important;
+	font-size: 24px;
+	line-height: 28px;
+	font-family: 'proxima-nova-n7', 'proxima-nova', sans-serif; 	
+}
+
+.modal-content h2 {
+	color: #91022e;
+}
+
+.modal-content a {
+	font-weight: 600;
+	color: #91022e;
+}
+
+.modal-content a:hover {
+	color: #333;
+}
+
+.modal-content .title {
+	color: #91022e;
+	font-size: 1.25em;
+	font-weight: 500;
+}
+
+.modal-content p:last-child {
+	margin-bottom: 0;
+}
+
+.modal-content p:only-child {
+	margin-bottom: 0;
+}
+
+.modal-content p.img.left {
+	float: left;
+	margin-right: 30px;
+}
+
+.modal-content p.img.right {
+	float: right;
+	margin-left: 30px;
+}
+
+.modal-content .no-bottom {
+	margin-bottom: 0;
+}
+
+.ie-7 #modal-container .close {
+	background: url(https://costa-experience.s3.amazonaws.com/img/UI%20Assets/ie-7/close-btn.png) 0 0 no-repeat;
+}
+
+#modal-container .close {
+	position: absolute;
+	top: -33px;
+	right: -33px;
+	width: 66px;
+	height: 66px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/UI%20Assets/close-btn.png) 0 0 no-repeat;
+	background-size: 65px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#modal-container .close a {
+	color: #fff;
+	text-decoration: none;	
+	font-size: 20px;
+	line-height: 65px;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* small modal fixes */
+
+/*.modal-content .nations-favourite-i-text-ii {
+	width: 417px;
+	float: right;
+}*/
+
+/* modal slideshow */
+#slideshow-wrap {
+	margin-bottom: 20px;
+}
+
+.single-gallery #slideshow-wrap {
+	margin-bottom: 0;
+}
+
+.slideshow {
+	position: relative;
+}
+
+.modal-content .slideshow-next {
+	position: absolute;
+	left: -20px;
+}
+
+.modal-content .slideshow-prev {
+	position: absolute;
+	right: -20px;
+}
+
+.modal-content .slideshow-prev, .modal-content .slideshow-next {
+	color: #91002e;
+	font-size: 15px;
+	background: url(https://costa-experience.s3.amazonaws.com/img/UI%20Assets/modal-shape.png) center center no-repeat;
+	width: 39px;
+	height: 39px;
+	text-align: center;
+	line-height: 39px;
+	display: block;
+	text-decoration: none;
+}
+
+.modal-content .slideshow-prev.stopped, .modal-content .slideshow-next.stopped {
+	opacity: 0.5;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi){ 
+
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi){ 
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ 
+
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+	.tree-foilage {
+		background-size: 141.75px 113.25px;
+	}
+}
+
+@media (min-width:1921px),(min-height:1081px) {
+    html:after {
+    	content: "";
+    	position: absolute;
+    	width: 2100px;
+    	height: 1326px;
+    	left: 50%;
+    	top: 50%;
+    	margin-top: -648px;
+		margin-left: -1051px;
+    	z-index: 98;
+        background: url(https://costa-experience.s3.amazonaws.com/img/global/1920-1080_frame.png) no-repeat center center;
+    }
+    html {
+    	background: #91022e;
+    }
+
+    body {
+        width: 1920px;
+        height: 1080px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -540px 0 0 -960px;
+    }
+    .scene li, .container {
+		margin: -540px 0 0 -1050px;
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+    #main-ui img {
+        width: 100%;
+        transform: scale(0.5);
+        -ms-transform: scale(0.5); /* IE 9 */
+        -webkit-transform: scale(0.5); /* Safari and Chrome */   
+    }
+}
+
+#portrait-overlay {
+	display: none;
+	background: url(https://costa-experience.s3.amazonaws.com/img/UI%20Assets/orientate-device.png) no-repeat center center #91022e;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;	
+}
+
+@media screen and (orientation:portrait) {
+	#portrait-overlay {
+		display: block;
+	}
+}
+
+.fb-like iframe {
+	top: -21px;
+}
+
