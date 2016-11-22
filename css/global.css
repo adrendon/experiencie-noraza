@@ -447,19 +447,19 @@ p {
 	left: 0;
 }
 .box1 {
-	z-index: 5;
+	z-index: 4;
 }
 .box2 {
-	z-index: 5;
+	z-index: 6;
 }
 .box3 {
-	z-index: 5;
+	z-index: 10;
 }
 .box4 {
-	z-index: 4;
+	z-index: 8;
 }	
 .box5 {
-	z-index: 4;
+	z-index: 2;
 }	
 .layer-contents {
 	z-index: inherit;
@@ -567,13 +567,13 @@ p {
 }
 
 /* 02 Nations Favourite */
-.view-02-Nations-Favourite {
+/*.view-02-Nations-Favourite {
     background: url(https://costa-experience.s3.amazonaws.com/img/backgrounds/a3cfe5.png) #a3cfe5;
 }
 
 .view-02-Nations-Favourite .box4 .level {
 	background: #a3cfe5;
-}
+}*/
 .view-02-Nations-Favourite .clouds {
     z-index: 4;
 }
