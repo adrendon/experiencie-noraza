@@ -429,12 +429,12 @@ p {
 	z-index:1;
 }
 .scene li, .container {
-	width: 2100px !important;
+	width: 1920px !important;
 	height: 1080px !important;
 	position: absolute !important;
 	top: 50% !important;
 	left: 50% !important;
-	margin: -540px 0 0 -1050px;
+	margin: -540px 0 0 -960px;
 }
 .container {
 	z-index: 10;	
@@ -447,19 +447,19 @@ p {
 	left: 0;
 }
 .box1 {
-	z-index: 10;
+	z-index: 5;
 }
 .box2 {
-	z-index: 8;
+	z-index: 5;
 }
 .box3 {
-	z-index: 6;
+	z-index: 5;
 }
 .box4 {
 	z-index: 4;
 }	
 .box5 {
-	z-index: 2;
+	z-index: 4;
 }	
 .layer-contents {
 	z-index: inherit;
@@ -2297,7 +2297,7 @@ p {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	width: 2100px;
+	width: 1920px;
 	height: 1080px;
 	margin-left: -1050px;
 	margin-top: -540px;
@@ -2515,7 +2515,7 @@ p {
     html:after {
     	content: "";
     	position: absolute;
-    	width: 2100px;
+    	width: 1920px;
     	height: 1326px;
     	left: 50%;
     	top: 50%;
